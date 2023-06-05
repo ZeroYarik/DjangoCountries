@@ -1,2 +1,6 @@
-# DjangoCountries
-My project for Django course.
+.idea/*
+.vscode/*
+*venv/
+*venv
+*.pyc
+db.*
