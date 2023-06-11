@@ -12,6 +12,14 @@ def home(request):
 def countries_list(request):
     text = "<ol>"
     for certain_country in countries:
-        text += f"<li>{certain_country['country']}</li>"
+        text += f"<li><a href='/certain_country/{certain_country['country']}'>{certain_country['country']}</a></li>"
     text += "</ol>"
     return HttpResponse(text)
+
+def country_page(request, country):
+    for certain_country in countries:
+        if certain_country ['country'] == country:
+            text = f"""<h2>{certain_country['country']}</h2>
+            Languages: {certain_country['languages']}
+            """
+            return HttpResponse(text)
