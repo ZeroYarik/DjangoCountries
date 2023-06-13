@@ -1,4 +1,17 @@
-[ZoneTransfer]
-ZoneId=3
-ReferrerUrl=https://drive.google.com/
-HostUrl=https://doc-00-ao-docs.googleusercontent.com/docs/securesc/rltvd9sn3ief4n127fvis66ep310hhp9/hii9vjhv19grel02coslfbop1g8ke17m/1685970225000/04330354856914409701/04400939422875748354/1050xzT6GpCtO-WC0FKZhlx0moubesr1R?e=download&ax=ADWCPKDgT_e8a1YU-iw4Lkdzs0lpLvXGDnfbbmzonwt4NHlQqj02DwmtcotoXFoBRjJM2GHyTdMz0n58heVX5cf31yXy4sKzJiKtStsbSOOzSMzcSAEnak4IzFaJMVE1lQfuiXoRBMxqPog0oRAY9_v5V8DDDYEVXG26iYElm8EBDrvA1dhTW0Z3zlwqzxeBNBAoSGhb9AWaKoczearYYjmZb-nfjSEqfuoOu9OR2NWNtTxRXFGBRb-ikkQA0ztExdl-omD__df9BjPamtGngo5LWh3ftefmryWunGELvizJWq556SEmhq8xg7J6bYxoglbt_i6F_W3sxFaD1o77gHDE2yYoRjBbc99YTkY6W8Q1tqDF00XEdcVx9bGphL81ewTxZZUMiS03_-T0UdR30VqoiKiye9bQI0zupLAJsAWlyGeGl-LoiMQv7zN6917yebTL-S9dVMPpgBRw_GCnk3nAqTzgs3hLVFlQLd55UH4puePAFwyIKifzxC89T15I93QjQHwbRR9Vi15sv0vU-2Jd19bdDtHl_GZrb2RjYnd4hqUoAUceZ-Yxsq9sm5fdMXoiDoDk32Rm3OuiXPXDVLnsvl3cbRmC6_rauDynIh41Oxufh9Hltw4O5dYRh1Hgrtuj-w2UgEYbgQaJ1tzW_LW-rAIFEtiQUDc4vCeBT_II_VRj5U-UC1RtaH-eFzI_NTdMCNOkalyPa45EVsvRRS_5rrSSI-4MBsZ12c-YiozO49kJUEAacrdPBGhhSuIXj0oEzfZeSIzqyXskJb1oEaIGLBeHC5n_2-tAZmWMkVmck6t6n2RV991DPgyq9sSp7CpTk0kCey-op14P6CbN6bEVJ6Zsej64FMfIQZNxzQd-NHVPqrFnSn0VsaMN7MaUphw&uuid=5c108701-0249-43a1-bfcd-c2242f5602af&authuser=0&nonce=lnmr842jnirn4&user=04400939422875748354&hash=c2dmnfnknsnnh4aha83t6feh8ojpe80t
+### Часть-1
+- [x] Сгенерирована заготовка django-проекта
+- [x] Добавлено приложение(App)
+- [x] По корневому url'у доступна html-страница с приветствием и минимальным оформлением
+- [x] В проект добавлен `.gitignore` (venv, настройки IDE и файл БД не под репозиторием)
+- [x] Проект загружен на github
+
+### Часть-2
+- [x] При отображении всех страниц используются html-шаблоны(templates)
+- [x] В корень проекта добавлен файл countries.json со списком всех стран
+- [x] По url: `/countries-list/` отображается нумерованный список всех стран (только названия стран)
+- [x] Название каждой страны гиперссылка, которая ведет на персональную страницу данной страны.
+- [x] Реализована персональная страница для каждой страны
+- [x] На главной странице добавлена ссылка “Языки”(url: `/languages/`), на которой отображается список всех языков
+
+### Часть-3
+Сюда задания из гугло-дока переносим самостоятельно, помечаем выполненные.
