@@ -33,12 +33,3 @@ def languages_list(request):
     context = {'languages': languages}
     return render(request, 'languages.html', context)
 
-
-
-
-
-    # text = "<ol>"
-    # for certain_country in countries:
-    #     text += f"<li><a href='/certain_country/{certain_country['country']}'>{certain_country['country']}</a></li>"
-    # text += "</ol>"
-    # return HttpResponse(text)
