@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> {{ country }} </h1>
+<h2>List of languages:</h2>
+    <ul>
+        {% for language in languages %}
+        <li>{{language}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
