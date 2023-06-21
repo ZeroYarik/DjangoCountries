@@ -1,35 +1,32 @@
-from django.shortcuts import render, HttpResponse
-from django.http import HttpResponseNotFound
-import json
-from itertools import chain
+from django.shortcuts import render
+from MainApp.models import Country, Language
 
-with open('country-by-languages.json') as f:
-    countries = json.load(f)
-
-with open('country-by-languages.json') as f:
-    language = json.load(f)
 
 def home(request):
     return render(request, 'index.html')
 
+
 def countries_list(request):
-    context = {'countries': countries}
+    countries = Country.objects.all()
+    context = {
+        'countries': countries
+    }
     return render(request, 'countries-list.html', context)
 
 
 def country_page(request, country):
-    for item in countries:
-        if item['country'] == country:
-            context = {'country': country,
-                       'languages': item['languages']}
-            return render(request, 'country-page.html', context)
+    item = Country.objects.get(name=country)
+    languages = item.languages.all()
+    context = {
+        'country': item.name,
+        'languages': languages
+               }
+    return render(request, 'country-page.html', context)
 
 
 def languages_list(request):
-    languages = set()
-    for item in countries:
-        for language in item['languages']:
-            languages.add(language)
-    context = {'languages': languages}
+    languages = Language.objects.all()
+    context = {
+        'languages': languages
+    }
     return render(request, 'languages.html', context)
-
