@@ -20,7 +20,7 @@ def country_page(request, country):
     context = {
         'country': item.name,
         'languages': languages
-               }
+    }
     return render(request, 'country-page.html', context)
 
 
@@ -30,3 +30,12 @@ def languages_list(request):
         'languages': languages
     }
     return render(request, 'languages.html', context)
+
+def language_page(request, language):
+    item = Language.objects.get(name=language)
+    countries = item.country_set.all()
+    context = {
+        'language': item.name,
+        'countries': countries
+    }
+    return render(request, 'language-page.html', context)
