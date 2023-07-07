@@ -2,7 +2,7 @@
 {% block content %}
 
 <nav class="nav nav-pills nav-fill">
-    {% for letter in alphabet %}
+    {% for letter in letters %}
   <a class="nav-item nav-link " href="{% url 'countries-letter' letter %}">{{ letter }}</a>
     {% endfor %}
 </nav>

@@ -7,12 +7,15 @@ def home(request):
 
 
 def countries_list(request):
-    letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    letters = [
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+        'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+    ]
     countries = Country.objects.all()
 
     context = {
         'countries': countries,
-        'letters': letters
+        'letters': letters,
     }
     return render(request, 'countries-list.html', context)
 
@@ -49,4 +52,4 @@ def countries_letter(request, letter):
         'letter': letter,
         'countries': countries,
     }
-    return render(request, 'countries-letter.html', context)
+    return render(request, 'countries-by-letter.html', context)
